@@ -1,8 +1,14 @@
 /* Overall page style */
 
+/*
+Primary colors:
+- dark: #1c1e25
+- light: #9e76fa
+*/
+
 body {
   margin: 0 auto;
-  background-color: #242930;
+  background-color: #1c1e25;
   font-family: sans-serif;
   font-size: 14pt;
      -moz-text-size-adjust: none;
@@ -15,7 +21,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: white;
+  color: #eab1fd;
   text-decoration: underline;
 }
 
@@ -46,7 +52,7 @@ a:hover {
   font-size: 0.8em;
   clear: both;
   background: #242930 linear-gradient(#4d00ff, #242930) repeat-x;
-  border: 1px solid #eaeaea;
+  border: 1px solid #242930;
   border-radius: 5px;
   overflow-x: auto;
   overflow-y: hidden;
@@ -60,11 +66,11 @@ a:hover {
 }
 .mainmenu a.active,
 .mainmenu a:hover {
-  color: #9e76fa;
+  color: #eab1fd;
   border-bottom: 2px solid white;
 }
 div#hbdrop {
-  background-color: #242930;
+  background-color: #1c1e25;
   border: 1px solid black;
   border-top: white;
   border-radius: 0 0 0.5em 0.5em;
@@ -85,7 +91,7 @@ div#hbdrop {
 .submenu a, .submenu label {
   padding: 10px 11px;
   text-decoration: none;
-  color: white;
+  color: #9e76fa;
 }
 .submenu label {
   white-space: nowrap;
@@ -94,14 +100,10 @@ div#hbdrop {
   padding: 6px 10px;
   border: 1px solid #9e76fa;
   border-radius: 5px;
-  color: white;
+  color: #eab1fd; 
 }
 span.submenuctrl {
   color: white;
-  background-color: #242930;
-  border: 1px solid #9e76fa;
-}
-span.submenuctrl {
   white-space: nowrap;
 }
 
@@ -152,16 +154,64 @@ span.submenuctrl {
   margin-right: 1em;
 }
 
-input, select, textarea {
+input, select, textarea, button {
   color: white;
   background-color: #181b20;
   border: 1px solid #9e76fa;
+  padding: 2px;
 }
 
+select, button, input[type="submit"], input[type="button"] {
+  color: #9e76fa;
+  border-radius: 3px;
+}
+
+button:hover, input[type="submit"]:hover, input[type="button"]:hover {
+  color: #eab1fd;
+  cursor: pointer;
+}
 
 hr {
   color: #eee;
 }
+
+td.diffln del {
+  background-color: #712743;
+}
+
+td.diffln ins {
+  background-color: #1f4c18;
+}
+
+
+td.difftxt del {
+  background-color: #601635;
+}
+
+td.difftxt del > del {
+  background-color: #7b304c;
+}
+
+td.difftxt ins {
+  background-color: #0d3c08;
+}
+
+td.difftxt ins > ins {
+  background-color: #2c5924;
+}
+
+td.difftxt del > del.edit {
+  background-color: #233781;
+}
+
+td.difftxt ins > ins.edit {
+  background-color: #233781;
+}
+
+tr.diffskip.jchunk {
+  background-color: #1b0b29;
+}
+
 
 
 /* Page footer */
@@ -255,6 +305,9 @@ div.timelineDate {
 }
 .timelineSecondary {
   background-color: #722595;
+}
+.timelineCurrent {
+  background-color: #1b0b29;
 }
 
 
