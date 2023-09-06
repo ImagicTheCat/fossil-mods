@@ -2,7 +2,7 @@
 
 body {
   margin: 0 auto;
-  background-color: white;
+  background-color: #242930;
   font-family: sans-serif;
   font-size: 14pt;
      -moz-text-size-adjust: none;
@@ -11,11 +11,11 @@ body {
 }
 
 a {
-  color: #4183C4;
+  color: #9e76fa;
   text-decoration: none;
 }
 a:hover {
-  color: #4183C4;
+  color: white;
   text-decoration: underline;
 }
 
@@ -23,7 +23,7 @@ a:hover {
 /* Page title, above menu bars */
 
 .title {
-  color: #4183C4;
+  color: white;
   float: left;
 }
 .title h1 {
@@ -31,7 +31,7 @@ a:hover {
 }
 .title h1:after {
   content: " / ";
-  color: #777;
+  color: white;
   font-weight: normal;
 }
 .status {
@@ -45,7 +45,7 @@ a:hover {
 .mainmenu {
   font-size: 0.8em;
   clear: both;
-  background: #eaeaea linear-gradient(#fafafa, #eaeaea) repeat-x;
+  background: #242930 linear-gradient(#4d00ff, #242930) repeat-x;
   border: 1px solid #eaeaea;
   border-radius: 5px;
   overflow-x: auto;
@@ -55,16 +55,16 @@ a:hover {
 }
 .mainmenu a {
   text-decoration: none;
-  color: #777;
-  border-right: 1px solid #eaeaea;
+  color: white;
+  border-right: 1px solid #242930;
 }
 .mainmenu a.active,
 .mainmenu a:hover {
-  color: #000;
-  border-bottom: 2px solid #D26911;
+  color: #9e76fa;
+  border-bottom: 2px solid white;
 }
 div#hbdrop {
-  background-color: white;
+  background-color: #242930;
   border: 1px solid black;
   border-top: white;
   border-radius: 0 0 0.5em 0.5em;
@@ -85,31 +85,37 @@ div#hbdrop {
 .submenu a, .submenu label {
   padding: 10px 11px;
   text-decoration: none;
-  color: #777;
+  color: white;
 }
 .submenu label {
   white-space: nowrap;
 }
 .submenu a:hover, .submenu label:hover {
   padding: 6px 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #9e76fa;
   border-radius: 5px;
-  color: #000;
+  color: white;
 }
-span.submenuctrl, span.submenuctrl input, select.submenuctrl {
-  color: #777;
+span.submenuctrl {
+  color: white;
+  background-color: #242930;
+  border: 1px solid #9e76fa;
 }
 span.submenuctrl {
   white-space: nowrap;
 }
 
+.debug {
+  background-color: #1b0b29;
+  border: 2px solid #9e76fa;
+}
 
 /* Main document area; elements common to most pages. */
 
 .content {
   padding-top: 10px;
   font-size: 0.8em;
-  color: #444;
+  color: white;
 }
 .content blockquote {
   padding: 0 15px;
@@ -127,8 +133,8 @@ span.submenuctrl {
 .section {
   font-size: 1em;
   font-weight: bold;
-  background-color: #f5f5f5;
-  border: 1px solid #d8d8d8;
+  background-color: #1b0b29;
+  border: 1px solid #9e76fa;
   border-radius: 3px 3px 0 0;
   padding: 9px 10px 10px;
   margin: 10px 0;
@@ -145,6 +151,13 @@ span.submenuctrl {
   display: inline-block;
   margin-right: 1em;
 }
+
+input, select, textarea {
+  color: white;
+  background-color: #181b20;
+  border: 1px solid #9e76fa;
+}
+
 
 hr {
   color: #eee;
@@ -163,9 +176,11 @@ hr {
 
 /* Forum */
 
+/*
 .forum a:visited {
-  color: #6A7F94;
+  color: #9e76fa;
 }
+*/
 
 .forum blockquote {
   background-color: rgba(65, 131, 196, 0.1);
@@ -229,11 +244,17 @@ td.tktDspValue pre {
 /* Timeline */
 
 span.timelineDetail {
-    font-size: 90%;
+  font-size: 90%;
 }
 div.timelineDate {
-    font-weight: bold;
-    white-space: nowrap;
+  font-weight: bold;
+  white-space: nowrap;
+}
+.timelineSelected {
+  background-color: #432595;
+}
+.timelineSecondary {
+  background-color: #722595;
 }
 
 
