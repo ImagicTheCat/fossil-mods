@@ -1,14 +1,17 @@
 /* Overall page style */
 
-/*
-Primary colors:
-- dark: #1c1e25
-- light: #9e76fa
-*/
+:root {
+  --bg: #111111;
+  --bg-purple: #1D0038;
+  --fg-text: #C4C4C4;
+  --fg-text-low: #8B8B8B;
+  --fg-link: #DBB4FF;
+}
 
 body {
   margin: 0 auto;
-  background-color: #1c1e25;
+  background-color: var(--bg);
+  color: var(--fg-text);
   font-family: sans-serif;
   font-size: 14pt;
      -moz-text-size-adjust: none;
@@ -17,11 +20,10 @@ body {
 }
 
 a {
-  color: #9e76fa;
+  color: var(--fg-link);
   text-decoration: none;
 }
 a:hover {
-  color: #eab1fd;
   text-decoration: underline;
 }
 
@@ -29,7 +31,7 @@ a:hover {
 /* Page title, above menu bars */
 
 .title {
-  color: white;
+  color: var(--fg-text);
   float: left;
 }
 .title h1 {
@@ -37,7 +39,7 @@ a:hover {
 }
 .title h1:after {
   content: " / ";
-  color: white;
+  color: var(--fg-text);
   font-weight: normal;
 }
 .status {
@@ -51,8 +53,7 @@ a:hover {
 .mainmenu {
   font-size: 0.8em;
   clear: both;
-  background: #242930 linear-gradient(#4d00ff, #242930) repeat-x;
-  border: 1px solid #242930;
+  background-color: #4300DA;
   border-radius: 5px;
   overflow-x: auto;
   overflow-y: hidden;
@@ -61,17 +62,16 @@ a:hover {
 }
 .mainmenu a {
   text-decoration: none;
-  color: white;
-  border-right: 1px solid #242930;
+  color: #EEEEEE;
+  border-right: 1px solid var(--bg);
 }
 .mainmenu a.active,
 .mainmenu a:hover {
-  color: #eab1fd;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid #EEEEEE;
 }
 div#hbdrop {
-  background-color: #1c1e25;
-  border: 1px solid black;
+  background-color: var(--bg);
+  border: 1px solid #4300DA;
   border-top: white;
   border-radius: 0 0 0.5em 0.5em;
   display: none;
@@ -91,19 +91,19 @@ div#hbdrop {
 .submenu a, .submenu label {
   padding: 10px 11px;
   text-decoration: none;
-  color: #9e76fa;
+  color: var(--fg-link);
 }
 .submenu label {
   white-space: nowrap;
 }
 .submenu a:hover, .submenu label:hover {
   padding: 6px 10px;
-  border: 1px solid #9e76fa;
+  border: 1px solid var(--fg-link);
   border-radius: 5px;
-  color: #eab1fd; 
+  color: var(--fg-link);
 }
 span.submenuctrl {
-  color: white;
+  color: var(--fg-text);
   white-space: nowrap;
 }
 
@@ -117,7 +117,7 @@ span.submenuctrl {
 .content {
   padding-top: 10px;
   font-size: 0.8em;
-  color: white;
+  color: var(--fg-text);
 }
 .content blockquote {
   padding: 0 15px;
@@ -135,14 +135,14 @@ span.submenuctrl {
 .section {
   font-size: 1em;
   font-weight: bold;
-  background-color: #1b0b29;
-  border: 1px solid #9e76fa;
+  background-color: var(--bg-purple);
+  border: 1px solid #6200BC;
   border-radius: 3px 3px 0 0;
   padding: 9px 10px 10px;
   margin: 10px 0;
 }
 .sectionmenu {
-  border: 1px solid #d8d8d8;
+  border: 1px solid #6200BC;
   border-radius: 0 0 3px 3px;
   border-top: 0;
   margin-top: -10px;
@@ -155,19 +155,18 @@ span.submenuctrl {
 }
 
 input, select, textarea, button {
-  color: white;
+  color: var(--fg-text);
   background-color: #181b20;
   border: 1px solid #9e76fa;
   padding: 2px;
 }
 
 select, button, input[type="submit"], input[type="button"] {
-  color: #9e76fa;
+  color: var(--fg-link);
   border-radius: 3px;
 }
 
 button:hover, input[type="submit"]:hover, input[type="button"]:hover {
-  color: #eab1fd;
   cursor: pointer;
 }
 
@@ -175,44 +174,37 @@ hr {
   color: #eee;
 }
 
-td.diffln del {
-  background-color: #712743;
+table.diff {
+  border: 1px solid #6200BC;
 }
 
-td.diffln ins {
-  background-color: #1f4c18;
+td.diffln del, td.difftxt del {
+  background-color: #410000;
 }
 
-
-td.difftxt del {
-  background-color: #601635;
+td.diffln ins, td.difftxt ins {
+  background-color: #002200;
 }
 
 td.difftxt del > del {
-  background-color: #7b304c;
-}
-
-td.difftxt ins {
-  background-color: #0d3c08;
+  background-color: #7E0000;
 }
 
 td.difftxt ins > ins {
-  background-color: #2c5924;
+  background-color: #004600;
 }
 
 td.difftxt del > del.edit {
-  background-color: #233781;
+  background-color: #003F60;
 }
 
 td.difftxt ins > ins.edit {
-  background-color: #233781;
+  background-color: #003F60;
 }
 
 tr.diffskip.jchunk {
-  background-color: #1b0b29;
+  background-color: var(--bg-purple);
 }
-
-
 
 /* Page footer */
 
@@ -221,7 +213,7 @@ tr.diffskip.jchunk {
   padding: 10px;
   font-size: 0.7em;
   margin-top: 10px;
-  color: #ccc;
+  color: var(--fg-text-low);
 }
 
 /* Forum */

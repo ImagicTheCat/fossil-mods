@@ -11,7 +11,8 @@ Based on the `default` skin from Fossil contributed by Étienne Deparis.
 **Color palette:** *(Independent of luminance)*
 
 - #000000
-- #8500FF
-- #4E00FF
-- #FF0000
-- #00FF00
+- #8500FF (purple pink)
+- #4E00FF (purple blue)
+- #FF0000 (diff del)
+- #00FF00 (diff ins)
+- #00A8FF (diff edit)
