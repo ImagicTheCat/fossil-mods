@@ -3,9 +3,11 @@
 :root {
   --bg: #111111;
   --bg-purple: #1D0038;
-  --fg-text: #C4C4C4;
+  --bg-hl: #303030; /* background highlight */
+  --fg-text: #E2E2E2;
   --fg-text-low: #8B8B8B;
-  --fg-link: #DBB4FF;
+  --fg-link: #BEA1FF;
+  --fg-border: #3B3B3B;
 }
 
 body {
@@ -53,7 +55,7 @@ a:hover {
 .mainmenu {
   font-size: 0.8em;
   clear: both;
-  background-color: #4300DA;
+  background-color: #303030;
   border-radius: 5px;
   overflow-x: auto;
   overflow-y: hidden;
@@ -62,16 +64,17 @@ a:hover {
 }
 .mainmenu a {
   text-decoration: none;
-  color: #EEEEEE;
+  color: var(--fg-text);
   border-right: 1px solid var(--bg);
 }
 .mainmenu a.active,
 .mainmenu a:hover {
-  border-bottom: 2px solid #EEEEEE;
+  color: #CEB9FF;
+  border-bottom: 2px solid #CEB9FF;
 }
 div#hbdrop {
   background-color: var(--bg);
-  border: 1px solid #4300DA;
+  border: 1px solid #303030;
   border-top: white;
   border-radius: 0 0 0.5em 0.5em;
   display: none;
@@ -108,8 +111,9 @@ span.submenuctrl {
 }
 
 .debug {
-  background-color: #1b0b29;
-  border: 2px solid #9e76fa;
+  background-color: var(--bg-purple);
+  border: 2px solid #5400A0;
+  margin: 2px;
 }
 
 /* Main document area; elements common to most pages. */
@@ -154,20 +158,52 @@ span.submenuctrl {
   margin-right: 1em;
 }
 
-input, select, textarea, button {
+input, textarea {
   color: var(--fg-text);
-  background-color: #181b20;
-  border: 1px solid #9e76fa;
+  background-color: black;
+  border: 1px solid var(--fg-border);
   padding: 2px;
 }
 
-select, button, input[type="submit"], input[type="button"] {
-  color: var(--fg-link);
+select {
+  color: var(--fg-text);
   border-radius: 3px;
+  padding: 2px;
+  background-color: black;
+  border: 1px solid var(--fg-border);
+}
+
+button, input[type="submit"], input[type="button"] {
+  color: var(--fg-text);
+  border-radius: 5px;
+  background-color: #6623FF;
+  border: none;
+  font-weight: bold;
+  padding: 3px;
 }
 
 button:hover, input[type="submit"]:hover, input[type="button"]:hover {
   cursor: pointer;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  padding: 0px;
+  background-color: black;
+  display: inline-block;
+  border: 1px solid var(--fg-border);
+}
+
+input[type="checkbox"]:checked {
+  background-color: #6623FF;
+  border: 1px solid var(--fg-link);
+}
+
+input[type="checkbox"]:hover {
+  border: 1px solid var(--fg-link);
 }
 
 hr {
@@ -230,6 +266,21 @@ tr.diffskip.jchunk {
   padding: .1em 1em;
 }
 
+/* Branch */
+
+body.branch .brlist > table > tbody > tr:hover:not(.selected), body.branch .brlist > table > tbody > tr.selected {
+  background-color: var(--bg-hl);
+}
+
+/* Files */
+
+div.filetreeline:hover {
+	background-color: var(--bg-hl);
+}
+
+.fileage tr:hover {
+	background-color: var(--bg-hl);
+}
 
 /* Tickets */
 
@@ -293,13 +344,15 @@ div.timelineDate {
   white-space: nowrap;
 }
 .timelineSelected {
-  background-color: #432595;
+  border: none;
+  background-color: #2F009B;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
 .timelineSecondary {
-  background-color: #722595;
+  background-color: #460085;
 }
 .timelineCurrent {
-  background-color: #1b0b29;
+  background-color: var(--bg-hl);
 }
 
 
