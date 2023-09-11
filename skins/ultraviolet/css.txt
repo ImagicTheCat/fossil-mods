@@ -8,6 +8,7 @@
   --fg-text-low: #8B8B8B;
   --fg-link: #BEA1FF;
   --fg-border: #3B3B3B;
+  --fg-timeline: #E2E2E2;
 }
 
 body {
@@ -355,11 +356,110 @@ div.timelineDate {
   background-color: var(--bg-hl);
 }
 
+.tl-node {
+  width: 10px;
+  height: 10px;
+  border: 1px solid var(--fg-timeline);
+  background: black;
+  cursor: pointer;
+}
+.tl-node.leaf:after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 4px;
+  height: 4px;
+  background: var(--fg-timeline);
+}
+.tl-node.sel:after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 6px;
+  height: 6px;
+  background: #FF4444;
+}
+.tl-arrow {
+  width: 0;
+  height: 0;
+  transform: scale(.999);
+  border: 0 solid transparent;
+}
+.tl-arrow.u {
+  margin-top: -1px;
+  border-width: 0 3px;
+  border-bottom: 7px solid var(--fg-timeline);
+}
+.tl-arrow.u.sm {
+  border-bottom: 5px solid var(--fg-timeline);
+}
+.tl-line {
+  background: var(--fg-timeline);
+  width: 2px;
+}
+.tl-arrow.merge {
+  height: 1px;
+  border-width: 2px 0;
+}
+.tl-arrow.merge.l {
+  border-right: 3px solid var(--fg-timeline);
+}
+.tl-arrow.merge.r {
+  border-left: 3px solid var(--fg-timeline);
+}
+.tl-line.merge {
+  width: 1px;
+}
+.tl-arrow.cherrypick {
+  height: 1px;
+  border-width: 2px 0;
+}
+.tl-arrow.cherrypick.l {
+  border-right: 3px solid var(--fg-timeline);
+}
+.tl-arrow.cherrypick.r {
+  border-left: 3px solid var(--fg-timeline);
+}
+.tl-line.cherrypick.h {
+  width: 0px;
+  border-top: 1px dashed white;
+  border-left: 0px dashed white;
+  background: rgba(255,255,255,0);
+}
+.tl-line.cherrypick.v {
+  width: 0px;
+  border-top: 0px dashed white;
+  border-left: 1px dashed white;
+  background: rgba(255,255,255,0);
+}
+.tl-arrow.warp {
+  margin-left: 1px;
+  border-width: 3px 0;
+  border-left: 7px solid #D4A5FF;
+}
+.tl-line.warp {
+  background: #D4A5FF;
+}
+.tl-line.dotted.v {
+  width: 0px;
+  border-left-width: 2px;
+  border-left-style: dotted;
+  background: rgba(255,255,255,0);
+}
+
+td.tktTlOpen {
+  color: #FFC7C7;
+}
+td.tktTlClosed {
+  color: var(--fg-text-low);
+}
 
 /* Miscellaneous UI elements */
 
 .fossil-tooltip.help-buttonlet-content {
-  background-color: lightyellow;
+  background-color: var(--bg-hl);
 }
 
 
