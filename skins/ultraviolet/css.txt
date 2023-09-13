@@ -4,6 +4,7 @@
   --bg: #111111;
   --bg-purple: #1D0038;
   --bg-hl: #303030; /* background highlight */
+  --bg-section: #1F1F1F;
   --fg-text: #E2E2E2;
   --fg-text-low: #8B8B8B;
   --fg-link: #BEA1FF;
@@ -140,14 +141,14 @@ span.submenuctrl {
 .section {
   font-size: 1em;
   font-weight: bold;
-  background-color: var(--bg-purple);
-  border: 1px solid #6200BC;
+  background-color: var(--bg-section);
+  border: 1px solid #353535;
   border-radius: 3px 3px 0 0;
   padding: 9px 10px 10px;
   margin: 10px 0;
 }
 .sectionmenu {
-  border: 1px solid #6200BC;
+  border: 1px solid #353535;
   border-radius: 0 0 3px 3px;
   border-top: 0;
   margin-top: -10px;
@@ -212,35 +213,32 @@ hr {
 }
 
 table.diff {
-  border: 1px solid #6200BC;
+  border: 1px solid #353535;
 }
 
 td.diffln del, td.difftxt del {
-  background-color: #410000;
+  background-color: #490000;
 }
 
 td.diffln ins, td.difftxt ins {
-  background-color: #002200;
+  background-color: #002600;
 }
 
 td.difftxt del > del {
-  background-color: #7E0000;
+  background-color: #790000;
 }
 
 td.difftxt ins > ins {
-  background-color: #004600;
+  background-color: #004400;
 }
 
-td.difftxt del > del.edit {
-  background-color: #003F60;
-}
-
+td.difftxt del > del.edit,
 td.difftxt ins > ins.edit {
-  background-color: #003F60;
+  background-color: #013D59;
 }
 
 tr.diffskip.jchunk {
-  background-color: var(--bg-purple);
+  background-color: var(--bg-section);
 }
 
 /* Page footer */
@@ -345,12 +343,14 @@ div.timelineDate {
   white-space: nowrap;
 }
 .timelineSelected {
-  border: none;
-  background-color: #2F009B;
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  border: 1px solid #8752FF;
+  background-color: #1E0061;
+  box-shadow: 0px 0px 5px #8752FF;
 }
 .timelineSecondary {
-  background-color: #460085;
+  background-color: #2B0052;
+  border: 1px solid #A33EFF;
+  box-shadow: 0px 0px 5px #A33EFF;
 }
 .timelineCurrent {
   background-color: var(--bg-hl);
