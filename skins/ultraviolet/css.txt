@@ -92,7 +92,7 @@ div#hbdrop {
 .submenu {
   font-size: .7em;
   padding: 10px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid var(--bg-border);
 }
 .submenu a, .submenu label {
   padding: 10px 11px;
@@ -179,7 +179,7 @@ select {
 button, input[type="submit"], input[type="button"] {
   color: var(--fg-text);
   border-radius: 5px;
-  background-color: #6623FF;
+  background-color: #4D00FB;
   border: none;
   font-weight: bold;
   padding: 3px;
@@ -210,8 +210,81 @@ input[type="checkbox"]:hover {
 }
 
 hr {
-  color: #eee;
+  color: var(--fg-border);
 }
+
+:not(pre) > code {
+  background-color: var(--bg-hl);
+  border-radius: 4px;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+table[border="1"],
+table[border="1"] td, table[border="1"] th {
+  border: 1px solid var(--bg-border);
+  border-collapse: collapse;
+}
+table[border="1"] th {
+  background-color: var(--bg-section);
+  padding: 4px;
+}
+table[border="1"] td {
+  padding: 4px;
+}
+
+.generalError {
+  color: #FF9191 !important;
+}
+
+span.snippet>mark { /* Search marks */
+  font-weight: bold;
+  color: #C88BFF;
+}
+
+/* Footnote highlights */
+div.markdown sup.noteref > a:target,
+div.markdown span.notescope:target > sup.noteref > a,
+div.markdown span.notescope:hover  > sup.noteref > a,
+div.markdown > ol.footnotes > li > .fn-backrefs > a:target {
+  background: #8000F6;
+  color: white;
+}
+div.markdown span.notescope:hover,
+div.markdown span.notescope:target {
+  border-bottom: 2px solid #8000F6;
+}
+
+/* Special user marks */
+span.ueditInheritNobody {
+  color: #57F242;
+  padding: .2em;
+}
+span.ueditInheritDeveloper {
+  color: #FFC7C7;
+  padding: .2em;
+}
+span.ueditInheritReader {
+  color: #D4D4D4;
+  padding: .2em;
+}
+span.ueditInheritAnonymous {
+  color: #9ADEFD;
+  padding: .2em;
+}
+
+/* Stats */
+
+.statistics-report-graph-line {
+  border: 2px solid #A178FF;
+  background-color: #A178FF;
+}
+.statistics-report-graph-extra {
+  border: 2px dashed #A178FF;
+  border-left-style: none;
+}
+
+/* Diffs */
 
 table.diff {
   border: 1px solid var(--bg-border);
@@ -245,7 +318,7 @@ tr.diffskip.jchunk {
 /* Page footer */
 
 .footer {
-  border-top: 1px solid #ccc;
+  border-top: 1px solid var(--bg-border);
   padding: 10px;
   font-size: 0.7em;
   margin-top: 10px;
