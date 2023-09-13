@@ -254,16 +254,53 @@ tr.diffskip.jchunk {
 
 /* Forum */
 
-/*
-.forum a:visited {
-  color: #9e76fa;
+.forumPostBody a:visited {
+  color: var(--fg-link);
 }
-*/
 
 .forum blockquote {
-  background-color: rgba(65, 131, 196, 0.1);
-  border-left: 3px solid #254769;
+  background-color: #783DFF1A;
+  border-left: 3px solid #783DFF;
   padding: .1em 1em;
+}
+
+div.forumEdit {
+  border: 1px solid var(--bg-border);
+  padding-left: 1ex;
+  padding-right: 1ex;
+}
+div.forumTimeline {
+  border: 1px solid var(--bg-border);
+  padding-left: 1ex;
+  padding-right: 1ex;
+  max-width: 50em;
+  overflow: auto;
+}
+div.forumTime {
+  border: 1px solid var(--bg-border);
+  padding-left: 1ex;
+  padding-right: 1ex;
+  margin-top: 1ex;
+  display: flex;
+  flex-direction: column;
+}
+.forum-post-collapser {
+  /* Common style for the bottom-of-post and right-of-post
+     expand/collapse widgets. */
+  font-size: 0.8em;
+  padding: 0;
+  border: 1px solid var(--fg-border);
+  border-radius: 0 0 0.5em 0.5em;
+  background-color: var(--bg-section);
+  opacity: 0.8;
+  cursor: pointer;
+}
+div.forumSel {
+  background-color: #1D0038;
+  border-color: #8000F6;
+}
+div.forumObs {
+  color: var(--fg-text-low);
 }
 
 /* Branch */
