@@ -448,36 +448,39 @@ td.tktDspValue pre {
   white-space: pre-wrap;
 }
 
+/* Report: color modifications */
+
+/* Key: */
 .report td[style="background-color: #ffffff;"],
 .report tr[style="background-color:white"] {
   background-color: var(--bg) !important;
 }
-
+/* Active */
 .report td[style="background-color: #f2dcdc;"],
 .report tr[style="background-color:#f2dcdc"] {
-  background-color: #8E0B2F !important;
+  background-color: #6C373C !important;
 }
-
+/* Review */
 .report td[style="background-color: #e8e8e8;"],
 .report tr[style="background-color:#e8e8e8"] {
-  background-color: #5A4300 !important;
+  background-color: #55451F !important;
 }
-
+/* Fixed */
 .report td[style="background-color: #cfe8bd;"],
 .report tr[style="background-color:#cfe8bd"] {
-  background-color: #235100 !important;
+  background-color: #394C27 !important;
 }
-
+/* Tested */
 .report td[style="background-color: #bde5d6;"],
 .report tr[style="background-color:#bde5d6"] {
-  background-color: #00513F !important;
+  background-color: #0F503F !important;
 }
-
+/* Deferred */
 .report td[style="background-color: #cacae5;"],
 .report tr[style="background-color:#cacae5"] {
-  background-color: #43455F !important;
+  background-color: #3F446C !important;
 }
-
+/* Closed */
 .report td[style="background-color: #c8c8c8;"],
 .report tr[style="background-color:#c8c8c8"] {
   background-color: #5E5E5E !important;
