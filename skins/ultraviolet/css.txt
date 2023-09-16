@@ -500,6 +500,9 @@ div.timelineDate {
 .timelineCurrent {
   background-color: var(--bg-hl);
 }
+.timelineModernCell[id], .timelineColumnarCell[id], .timelineDetailCell[id] {
+  background-color: var(--bg-section);
+}
 
 .tl-node {
   width: 10px;
