@@ -2,4 +2,6 @@
 This page was generated in about
 <th1>puts [expr {([utime]+[stime]+1000)/1000*0.001}]</th1>s by
 Fossil $release_version $manifest_version $manifest_date
+
 </div>
+<script nonce="$<nonce>" src="$home/uv/.skin/prism.js"></script>
