@@ -397,6 +397,12 @@ div.filetreeline:hover {
 	background-color: var(--bg-hl);
 }
 
+blockquote.file-content {
+  /* file content block in the /file page */
+  margin: 0;
+  padding: 0;
+}
+
 /* Tickets */
 
 table.report {
