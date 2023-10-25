@@ -1,15 +1,16 @@
 /* Overall page style */
 
 :root {
-  --bg: #111111;
-  --bg-hl: #303030; /* background highlight */
-  --bg-section: #1F1F1F;
-  --bg-border: #353535;
-  --fg-text: #E2E2E2;
-  --fg-text-low: #8B8B8B;
-  --fg-link: #BEA1FF;
-  --fg-border: #3B3B3B; /* E.g. input borders */
-  --fg-timeline: #E2E2E2;
+  --bg: #25252C;
+  --bg-hl: #303036; /* background highlight */
+  --bg-ll: #1B1B20; /* background lowlight */
+  --bg-section: #1B1B20;
+  --bg-border: #46464c;
+  --fg-text: #cccccc;
+  --fg-text-low: #777777;
+  --fg-link: #C5ABFF;
+  --fg-timeline: #cccccc;
+  --bg-timeline: var(--bg-ll);
 }
 
 body {
@@ -57,7 +58,7 @@ a:hover {
 .mainmenu {
   font-size: 0.8em;
   clear: both;
-  background-color: #303030;
+  background-color: var(--bg-hl);
   border-radius: 5px;
   overflow-x: auto;
   overflow-y: hidden;
@@ -162,8 +163,8 @@ span.submenuctrl {
 
 input, textarea {
   color: var(--fg-text);
-  background-color: black;
-  border: 1px solid var(--fg-border);
+  background-color: var(--bg-ll);
+  border: 1px solid var(--bg-border);
   padding: 2px;
 }
 
@@ -171,8 +172,8 @@ select {
   color: var(--fg-text);
   border-radius: 3px;
   padding: 2px;
-  background-color: black;
-  border: 1px solid var(--fg-border);
+  background-color: var(--bg-ll);
+  border: 1px solid var(--bg-border);
 }
 
 button, input[type="submit"], input[type="button"] {
@@ -194,9 +195,9 @@ input[type="checkbox"] {
   height: 1em;
   vertical-align: middle;
   padding: 0px;
-  background-color: black;
+  background-color: var(--bg-ll);
   display: inline-block;
-  border: 1px solid var(--fg-border);
+  border: 1px solid var(--bg-border);
 }
 
 input[type="checkbox"]:checked {
@@ -209,7 +210,7 @@ input[type="checkbox"]:hover {
 }
 
 hr {
-  color: var(--fg-border);
+  color: var(--bg-border);
 }
 
 :not(pre) > code {
@@ -290,24 +291,24 @@ table.diff {
 }
 
 td.diffln del, td.difftxt del {
-  background-color: #440703;
+  background-color: #46221A;
 }
 
 td.diffln ins, td.difftxt ins {
-  background-color: #0E250B;
+  background-color: #232F1E;
 }
 
 td.difftxt del > del {
-  background-color: #7A0D05;
+  background-color: #6F362A;
 }
 
 td.difftxt ins > ins {
-  background-color: #1A4414;
+  background-color: #384C31;
 }
 
 td.difftxt del > del.edit,
 td.difftxt ins > ins.edit {
-  background-color: #313084;
+  background-color: #503982;
 }
 
 tr.diffskip.jchunk {
@@ -361,7 +362,7 @@ div.forumTime {
      expand/collapse widgets. */
   font-size: 0.8em;
   padding: 0;
-  border: 1px solid var(--fg-border);
+  border: 1px solid var(--bg-border);
   border-radius: 0 0 0.5em 0.5em;
   background-color: var(--bg-section);
   opacity: 0.8;
@@ -447,7 +448,7 @@ td.tktDspLabel {
 td.tktDspValue {
   text-align: left;
   vertical-align: top;
-  background-color: black;
+  background-color: var(--bg-ll);
   border: 1px solid var(--bg-border);
 }
 td.tktDspValue pre {
@@ -502,12 +503,12 @@ div.timelineDate {
   white-space: nowrap;
 }
 .timelineSelected {
-  background-color: #211046;
+  background-color: #2C1C4F;
   border: 1px solid #8752FF;
   box-shadow: 0px 0px 5px #8752FF;
 }
 .timelineSecondary {
-  background-color: #30093c;
+  background-color: #3A1546;
   border: 1px solid #A33EFF;
   box-shadow: 0px 0px 5px #A33EFF;
 }
@@ -522,7 +523,7 @@ div.timelineDate {
   width: 10px;
   height: 10px;
   border: 1px solid var(--fg-timeline);
-  background: black;
+  background: var(--bg-timeline);
   cursor: pointer;
 }
 .tl-node.leaf:after {
